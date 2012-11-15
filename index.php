@@ -17,9 +17,10 @@
 	preg_match("/(\$[0-9,]+(\.[0-9]{2})?)/", $output, $price);
 	preg_match("/<title>(.+)<\/title>/i", $output, $title);
 	
-	if (preg_match('/(\$[0-9,]+(\.[0-9]{2})?)/', $output))
+	if (preg_match('/(\$[0-9,]+(\.[0-9]{2})?)/', $output, $matches))
 	{
 	    echo 'found';
+		echo $matches;
 	}
 	else
 	{
