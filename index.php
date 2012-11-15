@@ -12,17 +12,10 @@
 
 	$output = curl_exec($ch);
  
-	$DOM = new DOMDocument;
-    $DOM->loadHTML($output);
-
-    //get the title
-	$items = $DOM->getElementsByTagName('title');
-
-	//display all H1 text
-	$title = $items[0];
+	preg_match('!<title>(.*?)</title>!i', $ouput, $title)
 	
 	preg_match('\$\d+(\.\d+)?',
-	    $output, $matches);
+	    $output, $price);
 
 ?>
-<?echo $url?>|<?echo $title?>|<?echo $matches[0]?>
+<?echo $url?>|<?echo $title[0]?>|<?echo $price[0]?>
