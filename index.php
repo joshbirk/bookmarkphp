@@ -17,6 +17,15 @@
 	preg_match("/^\$?(?!0,?\d)\d{1,3}(?=(?<1>,)|(?<1>))(\k<1>\d{3})*(\.\d\d)?)$/", $output, $price);
 	preg_match("/<title>(.+)<\/title>/i", $output, $title);
 	
+	if (preg_match('/^[0-9]+(?:\.[0-9]+)?$/im', $output))
+	{
+	    echo 'found'
+	}
+	else
+	{
+	    echo 'not found'
+	}
+	
 ?>
 <?echo $url?>|<?echo $title[1]?>|<?echo count($price)?>
 <br />
