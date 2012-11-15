@@ -1,5 +1,6 @@
 <?
 	error_reporting(-1);
+	ini_set('error_reporting', E_ALL);
 	
 	//URL of targeted site  
 	$url = urldecode($_GET["u"]);  
@@ -14,7 +15,7 @@
 
 	$output = curl_exec($ch);
  
-	preg_match('!<title>(.*?)</title>!i', $ouput, $title)
+	preg_match('!<title>(.*?)</title>!i', $ouput, $title);
 	
 	preg_match('\$\d+(\.\d+)?',
 	    $output, $price);
