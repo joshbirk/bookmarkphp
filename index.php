@@ -14,13 +14,13 @@
 	// grab URL and pass it to the browser  
 	$output = curl_exec($ch);
  
-	preg_match('!<title>(.*?)</title>!i', $output, $title);
+	preg_match("/<title>(.+)<\/title>/i", $output, $title);
 	
 	preg_match('\$\d+(\.\d+)?', $output, $price);
 
 
 
 ?>
-<?echo $url?>|<?echo $title?>|<?echo $price?>
+<?echo $url?>|<?echo $title[1]?>|<?echo $price[1]?>
 <br />
 <?echo $output?>
