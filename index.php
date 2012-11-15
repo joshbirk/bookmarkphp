@@ -19,11 +19,11 @@
 	
 	if (preg_match('/^[0-9]+(?:\.[0-9]+)?$/im', $output))
 	{
-	    echo 'found'
+	    echo 'found';
 	}
 	else
 	{
-	    echo 'not found'
+	    echo 'not found';
 	}
 	
 ?>
