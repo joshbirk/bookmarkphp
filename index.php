@@ -1,4 +1,6 @@
 <?
+	error_reporting(-1);
+	
 	//URL of targeted site  
 	$url = urldecode($_GET["u"]);  
 	$ch = curl_init();  
