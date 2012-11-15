@@ -27,6 +27,6 @@
 	}
 	
 ?>
-<?echo $url?>|<?echo $title[1]?>|<?echo $price?>
+<?echo $url?>|<?echo $title[1]?>|<?echo $price[0]?>
 <br />
 <?echo $output?>
