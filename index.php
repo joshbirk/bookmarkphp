@@ -14,8 +14,8 @@
 	// grab URL and pass it to the browser  
 	$output = curl_exec($ch);
  
+	preg_match("\b[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?\b", $output, $price);
 	preg_match("/<title>(.+)<\/title>/i", $output, $title);
-	preg_match("\b[0-9]{1,3}(?:,?[0-9]{3})*\.[0-9]{2}\b", $output, $price);
 	
 ?>
 <?echo $url?>|<?echo $title[1]?>|<?echo count($price)?>
