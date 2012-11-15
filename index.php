@@ -27,6 +27,6 @@
 	}
 	
 ?>
-<?echo $url?>|<?echo $title[1]?>|<?echo count($price)?>
+<?echo $url?>|<?echo $title[1]?>|<?echo $price?>
 <br />
 <?echo $output?>
