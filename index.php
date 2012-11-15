@@ -14,7 +14,7 @@
 	// grab URL and pass it to the browser  
 	$output = curl_exec($ch);
  
-	preg_match("\b[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?\b", $output, $price);
+	preg_match("/^\$?(?!0,?\d)\d{1,3}(?=(?<1>,)|(?<1>))(\k<1>\d{3})*(\.\d\d)?)$/", $output, $price);
 	preg_match("/<title>(.+)<\/title>/i", $output, $title);
 	
 ?>
