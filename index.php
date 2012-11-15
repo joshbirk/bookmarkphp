@@ -12,13 +12,15 @@
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  
 
 	// grab URL and pass it to the browser  
-
 	$output = curl_exec($ch);
  
-	preg_match('!<title>(.*?)</title>!i', $ouput, $title);
+	preg_match('!<title>(.*?)</title>!i', $output, $title);
 	
-	preg_match('\$\d+(\.\d+)?',
-	    $output, $price);
+	preg_match('\$\d+(\.\d+)?', $output, $price);
+
+
 
 ?>
 <?echo $url?>|<?echo $title[0]?>|<?echo $price[0]?>
+<br />
+<?echo $output?>
