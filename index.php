@@ -20,7 +20,7 @@
 	if (preg_match('/(\$[0-9,]+(\.[0-9]{2})?)/', $output, $matches))
 	{
 	    echo 'found';
-		echo $matches;
+		echo $matches[0];
 	}
 	else
 	{
