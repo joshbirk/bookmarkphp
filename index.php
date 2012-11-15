@@ -16,7 +16,7 @@
  
 	preg_match("/<title>(.+)<\/title>/i", $output, $title);
 	
-	preg_match('/^[0-9]+(?:\.[0-9]+)?$/im', $output, $price);
+	preg_match("/^\$?(\d{1,3}[ ,]?)*(\.\d{0,2})?$/", $output, $price);
 
 
 
