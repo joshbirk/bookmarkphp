@@ -15,9 +15,9 @@
 	$output = curl_exec($ch);
  
 	preg_match("/<title>(.+)<\/title>/i", $output, $title);
-	preg_match('^\$?\d{1,3}([ ,]?\d{3})*(\.\d{0,2})?$', $output, $price);
+	preg_match('^\$?([1-9]{1}[0-9]{0,2}(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,} (\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?)$', $output, $price);
 	
 ?>
-<?echo $url?>|<?echo $title[1]?>|<?echo $price[0]?>
+<?echo $url?>|<?echo $title[1]?>|<?echo $price?>
 <br />
 <?echo $output?>
