@@ -29,4 +29,4 @@
 	*/
 	
 ?>
-<?echo $url?>|<?echo $title[1]?>
+<?echo $url?>|||<?echo $title[1]?>
