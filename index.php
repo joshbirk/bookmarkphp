@@ -14,9 +14,8 @@
 	// grab URL and pass it to the browser  
 	$output = curl_exec($ch);
  
-	preg_match("/(\$[0-9,]+(\.[0-9]{2})?)/", $output, $price);
 	preg_match("/<title>(.+)<\/title>/i", $output, $title);
-	
+/*	
 	if (preg_match('/(\$[0-9,]+(\.[0-9]{2})?)/', $output, $matches))
 	{
 	    echo 'found';
@@ -26,8 +25,8 @@
 	{
 	    echo 'not found';
 	}
+	preg_match("/(\$[0-9,]+(\.[0-9]{2})?)/", $output, $price);
+	*/
 	
 ?>
-<?echo $url?>|<?echo $title[1]?>|<?echo $price[1]?>
-<br />
-<?echo $output?>
+<?echo $url?>|<?echo $title[1]?>
